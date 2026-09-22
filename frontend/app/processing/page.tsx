@@ -1,0 +1,3 @@
+import Link from 'next/link'
+import { WaveMark } from '@/components/orator'
+export default function Processing(){return <main className="flex min-h-screen items-center justify-center px-6 text-center"><div><div className="mx-auto flex h-32 w-32 items-center justify-center rounded-full bg-[var(--teal)]/10 animate-pulse-soft"><WaveMark large/></div><h1 className="mt-12 font-serif text-4xl">Listening to what<br/>you said...</h1><p className="mt-5 font-mono text-sm text-[var(--muted)]">This takes a few seconds.</p><Link href="/results" className="mt-12 inline-block font-mono text-xs text-[var(--rust)] underline underline-offset-4">View sample results</Link></div></main>}
