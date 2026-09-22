@@ -1,0 +1,50 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+:root {
+  --text: #001524;
+  --background: #ffecd1;
+  --primary: #75290f;
+  --secondary: #ff7b00;
+  --accent: #14606c;
+  --cream: #ffecd1;
+  --ink: #001524;
+  --rust: #75290f;
+  --orange: #ff7b00;
+  --teal: #14606c;
+  --line: rgba(0,21,36,.14);
+  --muted: rgba(0,21,36,.6);
+  --card: #fff5e6;
+}
+
+.dark {
+  --text: #dbf0ff;
+  --background: #2e1b00;
+  --primary: #f0a38a;
+  --secondary: #ff7b00;
+  --accent: #93e0eb;
+  --cream: #2e1b00;
+  --ink: #dbf0ff;
+  --rust: #f0a38a;
+  --orange: #ff7b00;
+  --teal: #93e0eb;
+  --line: rgba(219,240,255,.14);
+  --muted: rgba(219,240,255,.72);
+  --card: #3b260d;
+}
+
+@theme inline { --color-background: var(--background); --color-foreground: var(--text); --color-card: var(--card); --color-primary: var(--primary); --color-primary-foreground: var(--cream); --color-border: var(--line); --radius-lg: 12px; }
+* { box-sizing:border-box; }
+html { background:var(--background); }
+body { margin:0; background:var(--background); color:var(--text); }
+.font-serif { font-family: var(--font-spectral), Georgia, serif; }
+.font-mono { font-family: var(--font-source-code), monospace; }
+button, a { transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease; }
+button:active, a:active { transform:scale(.98); }
+::selection { background:var(--orange); color:var(--ink); }
+@keyframes pulse-soft { 0%,100%{transform:scale(.96);opacity:.65} 50%{transform:scale(1.04);opacity:1} }
+@keyframes wave { 0%,100%{transform:scaleY(.45)} 50%{transform:scaleY(1)} }
+.animate-pulse-soft { animation:pulse-soft 2s ease-in-out infinite; }
+.wave-bar { animation:wave 1.1s ease-in-out infinite; transform-origin:center; }
+.wave-bar:nth-child(2n){animation-delay:.15s}.wave-bar:nth-child(3n){animation-delay:.3s}.wave-bar:nth-child(4n){animation-delay:.45s}
